@@ -45,7 +45,6 @@
             this.tbYazar = new System.Windows.Forms.TabPage();
             this.tbKategori = new System.Windows.Forms.TabPage();
             this.tbKullanici = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbKitap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,7 +70,6 @@
             // 
             // tbKitap
             // 
-            this.tbKitap.Controls.Add(this.button1);
             this.tbKitap.Controls.Add(this.dataGridView1);
             this.tbKitap.Controls.Add(this.panel1);
             this.tbKitap.Location = new System.Drawing.Point(4, 54);
@@ -237,15 +235,6 @@
             this.tbKullanici.Text = "Kullanıcı Yönetimi";
             this.tbKullanici.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(960, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 63);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,7 +272,6 @@
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.ComboBox cbSec;
         private System.Windows.Forms.Button btnAra;
-        private System.Windows.Forms.Button button1;
     }
 }
 
