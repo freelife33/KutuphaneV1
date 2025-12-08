@@ -23,5 +23,11 @@ namespace KutuphaneV1
             kitapEkleForm.ShowDialog();
 
         }
+
+        private void btnYazarEkle_Click(object sender, EventArgs e)
+        {
+            frmYazarEkle  frmYzrEkle= new frmYazarEkle();
+            frmYzrEkle.ShowDialog();
+        }
     }
 }

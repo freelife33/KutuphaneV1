@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbKitap = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgKitaplar = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAra = new System.Windows.Forms.Button();
@@ -45,11 +45,19 @@
             this.tbYazar = new System.Windows.Forms.TabPage();
             this.tbKategori = new System.Windows.Forms.TabPage();
             this.tbKullanici = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnYazarEkle = new System.Windows.Forms.Button();
+            this.btnYazarGuncelle = new System.Windows.Forms.Button();
+            this.btnYazarSil = new System.Windows.Forms.Button();
+            this.dtgYazarlar = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tbKitap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgKitaplar)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tbYazar.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgYazarlar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,7 +78,7 @@
             // 
             // tbKitap
             // 
-            this.tbKitap.Controls.Add(this.dataGridView1);
+            this.tbKitap.Controls.Add(this.dtgKitaplar);
             this.tbKitap.Controls.Add(this.panel1);
             this.tbKitap.Location = new System.Drawing.Point(4, 54);
             this.tbKitap.Name = "tbKitap";
@@ -80,16 +88,16 @@
             this.tbKitap.Text = "Kitap Yönetimi";
             this.tbKitap.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgKitaplar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1561, 542);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgKitaplar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgKitaplar.Location = new System.Drawing.Point(3, 85);
+            this.dtgKitaplar.Name = "dtgKitaplar";
+            this.dtgKitaplar.RowHeadersWidth = 51;
+            this.dtgKitaplar.RowTemplate.Height = 24;
+            this.dtgKitaplar.Size = new System.Drawing.Size(1561, 542);
+            this.dtgKitaplar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -210,6 +218,8 @@
             // 
             // tbYazar
             // 
+            this.tbYazar.Controls.Add(this.dtgYazarlar);
+            this.tbYazar.Controls.Add(this.panel2);
             this.tbYazar.Location = new System.Drawing.Point(4, 54);
             this.tbYazar.Name = "tbYazar";
             this.tbYazar.Padding = new System.Windows.Forms.Padding(3);
@@ -236,6 +246,60 @@
             this.tbKullanici.Text = "Kullanıcı Yönetimi";
             this.tbKullanici.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel2.Controls.Add(this.btnYazarSil);
+            this.panel2.Controls.Add(this.btnYazarGuncelle);
+            this.panel2.Controls.Add(this.btnYazarEkle);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1561, 83);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnYazarEkle
+            // 
+            this.btnYazarEkle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnYazarEkle.Location = new System.Drawing.Point(0, 0);
+            this.btnYazarEkle.Name = "btnYazarEkle";
+            this.btnYazarEkle.Size = new System.Drawing.Size(201, 83);
+            this.btnYazarEkle.TabIndex = 0;
+            this.btnYazarEkle.Text = "Yazar Ekle";
+            this.btnYazarEkle.UseVisualStyleBackColor = true;
+            this.btnYazarEkle.Click += new System.EventHandler(this.btnYazarEkle_Click);
+            // 
+            // btnYazarGuncelle
+            // 
+            this.btnYazarGuncelle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnYazarGuncelle.Location = new System.Drawing.Point(201, 0);
+            this.btnYazarGuncelle.Name = "btnYazarGuncelle";
+            this.btnYazarGuncelle.Size = new System.Drawing.Size(245, 83);
+            this.btnYazarGuncelle.TabIndex = 1;
+            this.btnYazarGuncelle.Text = "Seçili Kaydı Güncelle";
+            this.btnYazarGuncelle.UseVisualStyleBackColor = true;
+            // 
+            // btnYazarSil
+            // 
+            this.btnYazarSil.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnYazarSil.Location = new System.Drawing.Point(446, 0);
+            this.btnYazarSil.Name = "btnYazarSil";
+            this.btnYazarSil.Size = new System.Drawing.Size(231, 83);
+            this.btnYazarSil.TabIndex = 2;
+            this.btnYazarSil.Text = "Seçili Kaydı Sil";
+            this.btnYazarSil.UseVisualStyleBackColor = true;
+            // 
+            // dtgYazarlar
+            // 
+            this.dtgYazarlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgYazarlar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgYazarlar.Location = new System.Drawing.Point(3, 86);
+            this.dtgYazarlar.Name = "dtgYazarlar";
+            this.dtgYazarlar.RowHeadersWidth = 51;
+            this.dtgYazarlar.RowTemplate.Height = 24;
+            this.dtgYazarlar.Size = new System.Drawing.Size(1561, 541);
+            this.dtgYazarlar.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,10 +310,13 @@
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tbKitap.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgKitaplar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tbYazar.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgYazarlar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,7 +329,7 @@
         private System.Windows.Forms.TabPage tbKategori;
         private System.Windows.Forms.TabPage tbKullanici;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgKitaplar;
         private System.Windows.Forms.Button btnKitapGuncelle;
         private System.Windows.Forms.Button btnKitapEkle;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -273,6 +340,11 @@
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.ComboBox cbSec;
         private System.Windows.Forms.Button btnAra;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnYazarGuncelle;
+        private System.Windows.Forms.Button btnYazarEkle;
+        private System.Windows.Forms.DataGridView dtgYazarlar;
+        private System.Windows.Forms.Button btnYazarSil;
     }
 }
 
