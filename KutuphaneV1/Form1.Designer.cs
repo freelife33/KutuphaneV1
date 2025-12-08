@@ -206,6 +206,7 @@
             this.btnKitapEkle.TabIndex = 0;
             this.btnKitapEkle.Text = "Yeni Kitap Ekle";
             this.btnKitapEkle.UseVisualStyleBackColor = true;
+            this.btnKitapEkle.Click += new System.EventHandler(this.btnKitapEkle_Click);
             // 
             // tbYazar
             // 

@@ -10,6 +10,6 @@ namespace KutuphaneV1.Entity
     {
         public int Id { get; set; }
         public String ev_adi { get; set; }
-
+       
     }
 }

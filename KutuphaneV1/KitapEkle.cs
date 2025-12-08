@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace KutuphaneV1
 {
-    public partial class Form1 : Form
+    public partial class KitapEkle : Form
     {
-        public Form1()
+        public KitapEkle()
         {
             InitializeComponent();
-        }
-
-        private void btnKitapEkle_Click(object sender, EventArgs e)
-        {
-           KitapEkle kitapEkleForm = new KitapEkle();
-            kitapEkleForm.ShowDialog();
-
         }
     }
 }
