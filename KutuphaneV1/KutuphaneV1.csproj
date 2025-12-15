@@ -107,6 +107,36 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKira.Designer.cs">
+      <DependentUpon>FrmKira.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKullanici.Designer.cs">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteri.Designer.cs">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTur.Designer.cs">
+      <DependentUpon>FrmTur.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmYazarEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +153,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKira.resx">
+      <DependentUpon>FrmKira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKullanici.resx">
+      <DependentUpon>FrmKullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteri.resx">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTur.resx">
+      <DependentUpon>FrmTur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmYazarEkle.resx">
       <DependentUpon>frmYazarEkle.cs</DependentUpon>
