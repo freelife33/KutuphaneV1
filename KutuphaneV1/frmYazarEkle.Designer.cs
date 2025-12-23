@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtYazarAdi = new System.Windows.Forms.TextBox();
-            this.txtYazarSoyadi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnYazarKaydet = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
+            this.btnYazarKaydet = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtYazarSoyadi = new System.Windows.Forms.TextBox();
+            this.txtYazarAdi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,49 +55,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ekleme Alanı";
-            // 
-            // txtYazarAdi
-            // 
-            this.txtYazarAdi.Location = new System.Drawing.Point(209, 77);
-            this.txtYazarAdi.Name = "txtYazarAdi";
-            this.txtYazarAdi.Size = new System.Drawing.Size(347, 36);
-            this.txtYazarAdi.TabIndex = 0;
-            // 
-            // txtYazarSoyadi
-            // 
-            this.txtYazarSoyadi.Location = new System.Drawing.Point(209, 118);
-            this.txtYazarSoyadi.Name = "txtYazarSoyadi";
-            this.txtYazarSoyadi.Size = new System.Drawing.Size(347, 36);
-            this.txtYazarSoyadi.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Yazar Adı";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Yazar Soyadı";
-            // 
-            // btnYazarKaydet
-            // 
-            this.btnYazarKaydet.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnYazarKaydet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnYazarKaydet.Location = new System.Drawing.Point(209, 173);
-            this.btnYazarKaydet.Name = "btnYazarKaydet";
-            this.btnYazarKaydet.Size = new System.Drawing.Size(157, 46);
-            this.btnYazarKaydet.TabIndex = 4;
-            this.btnYazarKaydet.Text = "Kaydet";
-            this.btnYazarKaydet.UseVisualStyleBackColor = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnIptal
             // 
@@ -110,6 +68,50 @@
             this.btnIptal.Text = "Vazgeç";
             this.btnIptal.UseVisualStyleBackColor = false;
             // 
+            // btnYazarKaydet
+            // 
+            this.btnYazarKaydet.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnYazarKaydet.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnYazarKaydet.Location = new System.Drawing.Point(209, 173);
+            this.btnYazarKaydet.Name = "btnYazarKaydet";
+            this.btnYazarKaydet.Size = new System.Drawing.Size(157, 46);
+            this.btnYazarKaydet.TabIndex = 4;
+            this.btnYazarKaydet.Text = "Kaydet";
+            this.btnYazarKaydet.UseVisualStyleBackColor = false;
+            this.btnYazarKaydet.Click += new System.EventHandler(this.btnYazarKaydet_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Yazar Soyadı";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(81, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Yazar Adı";
+            // 
+            // txtYazarSoyadi
+            // 
+            this.txtYazarSoyadi.Location = new System.Drawing.Point(209, 118);
+            this.txtYazarSoyadi.Name = "txtYazarSoyadi";
+            this.txtYazarSoyadi.Size = new System.Drawing.Size(347, 36);
+            this.txtYazarSoyadi.TabIndex = 1;
+            // 
+            // txtYazarAdi
+            // 
+            this.txtYazarAdi.Location = new System.Drawing.Point(209, 77);
+            this.txtYazarAdi.Name = "txtYazarAdi";
+            this.txtYazarAdi.Size = new System.Drawing.Size(347, 36);
+            this.txtYazarAdi.TabIndex = 0;
+            // 
             // frmYazarEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -120,6 +122,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yazar Ekleme Formu";
+            this.Load += new System.EventHandler(this.frmYazarEkle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

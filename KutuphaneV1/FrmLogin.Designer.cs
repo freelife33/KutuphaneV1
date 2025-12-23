@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.btnVazgec = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(57, 193);
+            this.label1.Location = new System.Drawing.Point(13, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 29);
             this.label1.TabIndex = 0;
@@ -51,7 +53,7 @@
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(230, 193);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(186, 193);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(362, 36);
             this.txtKullaniciAdi.TabIndex = 1;
@@ -59,7 +61,7 @@
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(233, 239);
+            this.txtSifre.Location = new System.Drawing.Point(189, 239);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(362, 36);
@@ -69,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(57, 239);
+            this.label2.Location = new System.Drawing.Point(13, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 29);
             this.label2.TabIndex = 2;
@@ -77,35 +79,52 @@
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(233, 305);
+            this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGirisYap.Location = new System.Drawing.Point(142, 295);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(170, 41);
+            this.btnGirisYap.Size = new System.Drawing.Size(214, 60);
             this.btnGirisYap.TabIndex = 4;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // btnVazgec
             // 
-            this.btnVazgec.Location = new System.Drawing.Point(422, 305);
+            this.btnVazgec.Location = new System.Drawing.Point(362, 295);
             this.btnVazgec.Name = "btnVazgec";
-            this.btnVazgec.Size = new System.Drawing.Size(170, 41);
+            this.btnVazgec.Size = new System.Drawing.Size(238, 60);
             this.btnVazgec.TabIndex = 5;
             this.btnVazgec.Text = "Vazçeç";
             this.btnVazgec.UseVisualStyleBackColor = true;
+            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(315, 61);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(240, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(253, 175);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(281, 380);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 391);
+            this.ClientSize = new System.Drawing.Size(616, 429);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.btnGirisYap);
@@ -130,5 +149,6 @@
         private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.Button btnVazgec;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

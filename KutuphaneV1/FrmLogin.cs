@@ -16,5 +16,35 @@ namespace KutuphaneV1
         {
             InitializeComponent();
         }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            string kullaniciAdi = "admin";
+            string sifre = "12345";
+
+            if (txtKullaniciAdi.Text==kullaniciAdi && txtSifre.Text==sifre)
+            {
+                Form1 frmAnaSayfa= new Form1();
+                frmAnaSayfa.Show();
+                this.Hide();
+                //this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış.");
+            }
+        }
+
+        private void btnVazgec_Click(object sender, EventArgs e)
+        {
+            txtKullaniciAdi.Clear();
+            txtSifre.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtKullaniciAdi.Text = "admin";
+            txtSifre.Text = "12345";
+        }
     }
 }

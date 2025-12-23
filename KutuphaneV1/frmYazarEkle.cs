@@ -7,14 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KutuphaneV1.DataAccess;
 
 namespace KutuphaneV1
 {
     public partial class frmYazarEkle : Form
     {
+       
         public frmYazarEkle()
         {
             InitializeComponent();
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnYazarKaydet_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void frmYazarEkle_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
