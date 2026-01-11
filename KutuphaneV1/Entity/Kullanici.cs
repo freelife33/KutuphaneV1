@@ -10,7 +10,7 @@ namespace KutuphaneV1.Entity
     {
         public int Id { get; set; }
         public String adi { get; set; }
-        public String sayadi { get; set; }
+        public String soyadi { get; set; }
         public String sifre { get; set; }
         public String rol { get; set; }
         public DateTime kt { get; set; }

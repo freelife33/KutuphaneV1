@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.txtKullanicSoyadi = new System.Windows.Forms.TextBox();
+            this.txtKullaniciSoyadi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtYetki = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnVazgec = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.cmbYetki = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +58,13 @@
             this.txtKullaniciAdi.Size = new System.Drawing.Size(436, 36);
             this.txtKullaniciAdi.TabIndex = 1;
             // 
-            // txtKullanicSoyadi
+            // txtKullaniciSoyadi
             // 
-            this.txtKullanicSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullanicSoyadi.Location = new System.Drawing.Point(312, 144);
-            this.txtKullanicSoyadi.Name = "txtKullanicSoyadi";
-            this.txtKullanicSoyadi.Size = new System.Drawing.Size(436, 36);
-            this.txtKullanicSoyadi.TabIndex = 3;
+            this.txtKullaniciSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciSoyadi.Location = new System.Drawing.Point(312, 144);
+            this.txtKullaniciSoyadi.Name = "txtKullaniciSoyadi";
+            this.txtKullaniciSoyadi.Size = new System.Drawing.Size(436, 36);
+            this.txtKullaniciSoyadi.TabIndex = 3;
             // 
             // label2
             // 
@@ -81,6 +81,7 @@
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.Location = new System.Drawing.Point(312, 204);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(436, 36);
             this.txtSifre.TabIndex = 5;
             // 
@@ -93,14 +94,6 @@
             this.label3.Size = new System.Drawing.Size(65, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Şifre";
-            // 
-            // txtYetki
-            // 
-            this.txtYetki.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYetki.Location = new System.Drawing.Point(312, 264);
-            this.txtYetki.Name = "txtYetki";
-            this.txtYetki.Size = new System.Drawing.Size(436, 36);
-            this.txtYetki.TabIndex = 7;
             // 
             // label4
             // 
@@ -131,24 +124,40 @@
             this.btnKaydet.TabIndex = 9;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // cmbYetki
+            // 
+            this.cmbYetki.DisplayMember = "Kullanıcı";
+            this.cmbYetki.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbYetki.FormattingEnabled = true;
+            this.cmbYetki.Items.AddRange(new object[] {
+            "Kullanıcı",
+            "Admin"});
+            this.cmbYetki.Location = new System.Drawing.Point(312, 264);
+            this.cmbYetki.Name = "cmbYetki";
+            this.cmbYetki.Size = new System.Drawing.Size(436, 39);
+            this.cmbYetki.TabIndex = 10;
+            this.cmbYetki.Text = "Kullanıcı";
             // 
             // FrmKullanici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbYetki);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnVazgec);
-            this.Controls.Add(this.txtYetki);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtKullanicSoyadi);
+            this.Controls.Add(this.txtKullaniciSoyadi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.label1);
             this.Name = "FrmKullanici";
-            this.Text = "FrmKullanici";
+            this.Text = "Kullanıcı Ekleme";
+            this.Load += new System.EventHandler(this.FrmKullanici_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,13 +167,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtKullaniciAdi;
-        private System.Windows.Forms.TextBox txtKullanicSoyadi;
+        private System.Windows.Forms.TextBox txtKullaniciSoyadi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtYetki;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnVazgec;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.ComboBox cmbYetki;
     }
 }

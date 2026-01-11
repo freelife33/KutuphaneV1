@@ -32,7 +32,7 @@
             this.txtTurAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAciklama = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTurEkle = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,15 +73,16 @@
             this.txtAciklama.TabIndex = 3;
             this.txtAciklama.Text = "";
             // 
-            // button1
+            // btnTurEkle
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(243, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTurEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTurEkle.Location = new System.Drawing.Point(243, 321);
+            this.btnTurEkle.Name = "btnTurEkle";
+            this.btnTurEkle.Size = new System.Drawing.Size(174, 44);
+            this.btnTurEkle.TabIndex = 4;
+            this.btnTurEkle.Text = "Kaydet";
+            this.btnTurEkle.UseVisualStyleBackColor = true;
+            this.btnTurEkle.Click += new System.EventHandler(this.btnTurEkle_Click);
             // 
             // button2
             // 
@@ -92,6 +93,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Vazgeç";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmTur
             // 
@@ -99,13 +101,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTurEkle);
             this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTurAdi);
             this.Controls.Add(this.label1);
             this.Name = "FrmTur";
             this.Text = "FrmTur";
+            this.Load += new System.EventHandler(this.FrmTur_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,7 +120,7 @@
         private System.Windows.Forms.TextBox txtTurAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox txtAciklama;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTurEkle;
         private System.Windows.Forms.Button button2;
     }
 }

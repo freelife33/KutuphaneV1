@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KutuphaneV1.DataAccess;
 
 namespace KutuphaneV1
 {
     public partial class FrmLogin : Form
     {
+        KullaniciDAL _kullaniciDAL = new KullaniciDAL();
         public FrmLogin()
         {
             InitializeComponent();
@@ -19,15 +21,19 @@ namespace KutuphaneV1
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            string kullaniciAdi = "admin";
-            string sifre = "12345";
 
-            if (txtKullaniciAdi.Text==kullaniciAdi && txtSifre.Text==sifre)
+            var kullanici = _kullaniciDAL.KullaniciGetir(txtKullaniciAdi.Text, txtSifre.Text);
+
+            if (kullanici==null)
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış.");
+                return;
+            }
+            if (txtKullaniciAdi.Text.ToLower()==kullanici.adi.ToLower() && txtSifre.Text==kullanici.sifre)
             {
                 Form1 frmAnaSayfa= new Form1();
                 frmAnaSayfa.Show();
                 this.Hide();
-                //this.Close();
             }
             else
             {
@@ -41,10 +47,5 @@ namespace KutuphaneV1
             txtSifre.Clear();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtKullaniciAdi.Text = "admin";
-            txtSifre.Text = "12345";
-        }
     }
 }

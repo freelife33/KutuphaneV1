@@ -219,6 +219,7 @@
             this.Controls.Add(this.label1);
             this.Name = "KitapEkle";
             this.Text = "KitapEkle";
+            this.Load += new System.EventHandler(this.KitapEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
